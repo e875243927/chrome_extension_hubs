@@ -1,1 +1,1 @@
-# chrome_extension_hubs
+# chrome_extension
