@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="popup.css">
+    <!-- Flag Icons CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css" />
+  </head>
+  <body>
+
+    <div class="header">
+      <h1 id="header" text-i18n-name="converter">Converter</h1>
+      <div class="language-toggle">
+        <button class="lang-icon" title="切換語言" id="lang-toggle">🌐</button>
+        <div class="lang-dropdown">
+          <div class="lang-option" data-lang="zh-TW">
+            <span class="fi fi-tw"></span>繁中
+          </div>
+          <div class="lang-option" data-lang="zh-CN">
+            <span class="fi fi-cn"></span>简中
+          </div>
+          <div class="lang-option" data-lang="en">
+            <span class="fi fi-us"></span>EN
+          </div>
+          <div class="lang-option" data-lang="ja">
+            <span class="fi fi-jp"></span>JP
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <!-- 單位類型選擇 -->
+      <div class="form-group">
+        <span class="badge badge-primary" id="unit-type-text">📊 選擇單位類型</span>
+        <select class="dropdown" id="unit-type-select">
+          <option class="dropdown-option" value="length">📏 長度</option>
+          <option class="dropdown-option" value="area">📐 面積</option>
+          <option class="dropdown-option" value="volume">🧊 容積</option>
+        </select>
+      </div>
+
+      <!-- 轉換設定區域 -->
+      <div class="conversion-section">
+        <div class="form-group">
+          <span class="badge badge-primary" id="unit-in-text">📥 輸入單位</span>
+          <select class="dropdown" id="value-in-select">
+            <option class="dropdown-option" value="m">公尺 (m)</option>
+            <option class="dropdown-option" value="cm">公分 (cm)</option>
+            <option class="dropdown-option" value="km">公里 (km)</option>
+          </select>
+        </div>
+
+        <div class="arrow-container">
+          <span class="conversion-arrow">⬇️</span>
+        </div>
+
+        <div class="form-group">
+          <span class="badge badge-primary" id="unit-out-text">📤 輸出單位</span>
+          <select class="dropdown" id="value-out-select">
+            <option class="dropdown-option" value="m">公尺 (m)</option>
+            <option class="dropdown-option" value="cm">公分 (cm)</option>
+            <option class="dropdown-option" value="km">公里 (km)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- 數值輸入 -->
+      <div class="form-group">
+        <span class="badge badge-primary" id="value-input-text">🔢 輸入數值</span>
+        <input id="value-input-box" type="number" class="input-box" placeholder="請輸入數值">
+      </div>
+
+      <!-- 結果顯示 -->
+      <div class="result-section">
+        <span class="badge badge-primary" id="result-text">✨ 轉換結果</span>
+        <div class="result-card">
+          <div class="result-main" id="result-value">結果: --</div>
+          <div class="result-details">
+            <div class="result-unit" id="result-unit">單位: --</div>
+            <div class="result-factor" id="result-factor">轉換因子: --</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="./i18n/i18n_ui_table.js"></script>
+    <script src="./i18n/i18n_error_table.js"></script>
+    <script src="./i18n/i18n_config.js"></script>
+    <script src="i18n.js"></script>
+    <script src="popup.js"></script>
+
+  </body>
+</html>

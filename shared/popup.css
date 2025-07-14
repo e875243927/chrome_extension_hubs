@@ -1,25 +1,36 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 /* body */
 body {
-    width: 400px;
+    /* width: 400px; */
+    width: 350px;
     min-height: 500px;
     margin: 0;
     padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif; */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-size: 14px;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    /* background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
+    background: #f8f9fa;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     overflow: hidden;
 }
 
-/* header */
+/* Header */
 .header {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     padding: 20px 16px;
-    text-align: center;
     position: relative;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header::before {
@@ -35,22 +46,19 @@ body {
 
 .header h1 {
     margin: 0;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     position: relative;
     z-index: 1;
 }
 
-/* container */
+/* Container */
 .container {
-    padding: 24px 16px;
-    background: white;
-    border-radius: 0 0 12px 12px;
+    padding: 20px;
     display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-    margin-top: 16px;
+    flex-direction: column;
+    gap: 20px;
 }
 
 /* button */
@@ -167,6 +175,68 @@ body {
     color: #6c757d;
     cursor: not-allowed;
     opacity: 0.7;
+}
+
+/* language selector */
+.language-toggle {
+    position: right;
+    padding: 0px 28px;
+}
+
+.lang-icon {
+    width: 24px;
+    height: 24px;
+    border: none;
+    background: none;
+    font-size: 14px;
+    cursor: pointer;
+    opacity: 0.6;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.lang-icon:hover {
+    opacity: 1;
+    background: #f8f9fa;
+}
+
+.lang-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    color: #212529;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: none;
+    z-index: 1000;
+    min-width: 60px;
+}
+
+.language-toggle:hover .lang-dropdown {
+    display: block;
+}
+
+.lang-option {
+    padding: 6px 12px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.lang-option:hover {
+    background: #f8f9fa;
+}
+
+.flag-icon {
+    width: 12px;
+    height: 9px;
+    margin-right: 4px;
+    border-radius: 1px;
 }
 
 /* input box */
@@ -338,6 +408,7 @@ input:checked + .slider-switch:before {
 
 /* 卡片 */
 .card {
+    width: 100%;
     background: white;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -409,4 +480,64 @@ input:checked + .slider-switch:before {
     background: #f8d7da;
     color: #721c24;
     border-left-color: #dc3545;
+}
+
+
+
+/* 未整理 */
+.conversion-section {
+    background: white;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 8px;
+}
+
+.arrow-container {
+    text-align: center;
+    margin: 8px 0;
+}
+
+.conversion-arrow {
+    font-size: 20px;
+    color: #667eea;
+}
+
+.result-section {
+    margin-top: 8px;
+}
+
+.result-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    margin-top: 8px;
+}
+
+.result-main {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.result-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.2);
 }
