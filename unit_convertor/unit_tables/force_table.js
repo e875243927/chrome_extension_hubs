@@ -1,4 +1,4 @@
-const forceTable = {
+export const forceTable = {
     'unit': {
         // 以牛頓 (N) 為基準
         'newton': { offset: 0, scale: 1 },                          // 1 N = 1 kg⋅m/s²
@@ -222,4 +222,4 @@ const forceTable = {
     },
 }
 
-module.exports = forceTable;
+

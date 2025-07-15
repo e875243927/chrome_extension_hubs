@@ -1,4 +1,4 @@
-const dataTransferSpeedTable = {
+export const dataTransferSpeedTable = {
     'unit': {
         // 位元每秒
         'bps': { offset: 0, scale: 1 },
@@ -56,4 +56,4 @@ const dataTransferSpeedTable = {
     },
 }
 
-module.exports = dataTransferSpeedTable;
+

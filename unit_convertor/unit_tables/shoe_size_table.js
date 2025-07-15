@@ -1,4 +1,4 @@
-const shoeSizeTable = {
+export const shoeSizeTable = {
     'unit': {
         // 以 25cm 腳長為基準 (約 US 8男鞋 / US 9.5女鞋)
         'foot_length_25cm': { offset: 0, scale: 1 },
@@ -400,4 +400,4 @@ const shoeSizeTable = {
     },
 }
 
-module.exports = shoeSizeTable;
+

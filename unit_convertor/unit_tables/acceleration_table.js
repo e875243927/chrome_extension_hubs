@@ -1,4 +1,4 @@
-const accelerationTable = {
+export const accelerationTable = {
     'unit': {
         // 以米每秒平方 (m/s²) 為基準
         'meter_per_second_squared': { offset: 0, scale: 1 },        // 1 m/s²
@@ -255,4 +255,4 @@ const accelerationTable = {
     },
 }
 
-module.exports = accelerationTable;
+

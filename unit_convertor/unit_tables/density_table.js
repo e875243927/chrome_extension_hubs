@@ -1,4 +1,4 @@
-const densityTable = {
+export const densityTable = {
     'unit': {
         // 以公斤每立方米 (kg/m³) 為基準
         'kilogram_per_cubic_meter': { offset: 0, scale: 1 },        // 1 kg/m³
@@ -212,4 +212,4 @@ const densityTable = {
     }
 }
 
-module.exports = densityTable;
+

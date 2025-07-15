@@ -1,4 +1,4 @@
-const capacityTable = {
+export const capacityTable = {
     'unit': {
         // 基本公制
         'liter': { offset: 0, scale: 1 },
@@ -93,4 +93,4 @@ const capacityTable = {
     },
 }
 
-module.exports = capacityTable;
+

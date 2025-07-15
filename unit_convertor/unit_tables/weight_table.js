@@ -1,4 +1,4 @@
-const weightTable = {
+export const weightTable = {
     'unit': {
         // 基本公制
         'gram': { offset: 0, scale: 1 },
@@ -84,4 +84,4 @@ const weightTable = {
     },
 }
 
-module.exports = weightTable;
+

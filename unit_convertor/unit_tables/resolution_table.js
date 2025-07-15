@@ -1,4 +1,4 @@
-const resolutionTable = {
+export const resolutionTable = {
     'unit': {
         // 基本像素單位
         'pixel': { offset: 0, scale: 1 },
@@ -68,4 +68,4 @@ const resolutionTable = {
     },
 }
 
-module.exports = resolutionTable;
+

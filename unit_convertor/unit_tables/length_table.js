@@ -1,4 +1,4 @@
-const lengthTable = {
+export const lengthTable = {
     'unit': {
         // 基本公制
         'meter': { offset: 0, scale: 1 },
@@ -117,4 +117,4 @@ const lengthTable = {
     },
 }
 
-module.exports = lengthTable;
+

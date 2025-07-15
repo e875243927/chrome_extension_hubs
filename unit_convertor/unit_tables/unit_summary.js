@@ -1,32 +1,32 @@
-const lengthTable = require('../unit_tables/length_table');
-const temperatureTable = require('../unit_tables/temperature_table');
-const capacityTable = require('../unit_tables/capacity_table');
-const weightTable = require('../unit_tables/weight_table');
-const timescaleTable = require('../unit_tables/timescale_table');
-const dataStorageTable = require('../unit_tables/data_storage');
-const dataTransferSpeedTable = require('../unit_tables/data_transfer_speed_table');
-const resolutionTable = require('../unit_tables/resolution_table');
-const cmosSizeTable = require('../unit_tables/cmos_size_table');
-const focalLengthTable = require('../unit_tables/focal_length_table');
-const angleTable = require('../unit_tables/angle_table');
-const magneticFieldTable = require('../unit_tables/magnetic_table');
-const fuelEfficiencyTable = require('../unit_tables/fuel_efficiency_table');
-const illuminanceTable = require('../unit_tables/illuminance_table');
-const areaTable = require('../unit_tables/area_table');
-const forceTable = require('../unit_tables/force_table');
-const energyTable = require('../unit_tables/energy_table');
-const automotivePowerTable = require('../unit_tables/automotive_power_table');
-const radioactivityTable = require('../unit_tables/radioactivity_table');
-const equivalentDoseTable = require('../unit_tables/equivalent_dose_table');
-const velocityTable = require('../unit_tables/velocity_table');
-const densityTable = require('../unit_tables/density_table');
-const pressureTable = require('../unit_tables/pressure_table');
-const accelerationTable = require('../unit_tables/acceleration_table');
-const paperSizeTable = require('../unit_tables/paper_size_table');
-const shoeSizeTable = require('../unit_tables/shoe_size_table');
+import { lengthTable } from './length_table.js';
+import { temperatureTable } from './temperature_table.js';
+import { capacityTable } from './capacity_table.js';
+import { weightTable } from './weight_table.js';
+import { timescaleTable } from './timescale_table.js';
+import { dataStorageTable } from './data_storage.js';
+import { dataTransferSpeedTable } from './data_transfer_speed_table.js';
+import { resolutionTable } from './resolution_table.js';
+import { cmosSizeTable } from './cmos_size_table.js';
+import { focalLengthTable } from './focal_length_table.js';
+import { angleTable } from './angle_table.js';
+import { magneticFieldTable } from './magnetic_table.js';
+import { fuelEfficiencyTable } from './fuel_efficiency_table.js';
+import { illuminanceTable } from './illuminance_table.js';
+import { areaTable } from './area_table.js';
+import { forceTable } from './force_table.js';
+import { energyTable } from './energy_table.js';
+import { automotivePowerTable } from './automotive_power_table.js';
+import { radioactivityTable } from './radioactivity_table.js';
+import { equivalentDoseTable } from './equivalent_dose_table.js';
+import { velocityTable } from './velocity_table.js';
+import { densityTable } from './density_table.js';
+import { pressureTable } from './pressure_table.js';
+import { accelerationTable } from './acceleration_table.js';
+import { paperSizeTable } from './paper_size_table.js';
+import { shoeSizeTable } from './shoe_size_table.js';
 
 // 單位轉換表格管理
-const unitConversionTable = {
+export const unitConversionTable = {
     'length': {
         'unit': lengthTable.unit,
         'unit_language': lengthTable.language,
@@ -263,4 +263,4 @@ const unitConversionTable = {
 
 }
 
-module.exports = unitConversionTable;
+

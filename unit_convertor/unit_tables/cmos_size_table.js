@@ -1,4 +1,4 @@
-const cmosSizeTable = {
+export const cmosSizeTable = {
     'unit': {
         // 以全畫幅面積為基準 (36×24mm = 864mm²)
         'full_frame': { offset: 0, scale: 1 },
@@ -76,4 +76,4 @@ const cmosSizeTable = {
     },
 }
 
-module.exports = cmosSizeTable;
+

@@ -1,5 +1,5 @@
-// const { convertUnit } = require('./unit_convert');
-// const { getUnitTypeLanguageTable, getUnitLanguageTable, getAvailableUnitType, getUnitConversionTableKey } = require('./unit_table_handler');
+// import { convertUnit } from './unit_convert.js';
+// import { getUnitTypeLanguageTable, getUnitLanguageTable, getAvailableUnitType, getUnitConversionTableKey } from './unit_table_handler.js';
 
 // console.log(convertUnit(1, 'length', 'meter', 'kilometer'));
 
@@ -10,7 +10,7 @@
 // console.log(getUnitConversionTableKey('length'));
 
 
-const { i18n } = require('./i18n');
+import { i18n } from './i18n.js';
 
 // // 基本翻譯
 // console.log(i18n.UI('convert')); // "轉換"

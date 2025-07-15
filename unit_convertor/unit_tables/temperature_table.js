@@ -1,4 +1,4 @@
-const temperatureTable = {
+export const temperatureTable = {
     'unit': {
         // 注意：溫度轉換需要特殊處理，不能只用係數
         // 建議改用轉換函數，這裡提供參考係數
@@ -40,4 +40,4 @@ const temperatureTable = {
     },
 }
 
-module.exports = temperatureTable;
+

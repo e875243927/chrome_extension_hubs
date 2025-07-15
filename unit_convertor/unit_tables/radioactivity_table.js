@@ -1,4 +1,4 @@
-const radioactivityTable = {
+export const radioactivityTable = {
     'unit': {
         // 以貝克勒爾 (Bq) 為基準
         'becquerel': { offset: 0, scale: 1 },                       // 1 Bq = 1 衰變/秒
@@ -146,4 +146,4 @@ const radioactivityTable = {
     },
 }
 
-module.exports = radioactivityTable;
+

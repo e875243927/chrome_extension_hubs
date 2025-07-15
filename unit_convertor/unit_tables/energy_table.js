@@ -1,4 +1,4 @@
-const energyTable = {
+export const energyTable = {
     'unit': {
         // 以焦耳 (J) 為基準
         'joule': { offset: 0, scale: 1 },
@@ -201,4 +201,4 @@ const energyTable = {
     },
 }
 
-module.exports = energyTable;
+

@@ -1,4 +1,4 @@
-const timescaleTable = {
+export const timescaleTable = {
     'unit': {
         'second': { offset: 0, scale: 1 },
         'millisecond': { offset: 0, scale: 0.001 },
@@ -42,4 +42,4 @@ const timescaleTable = {
     },
 }
 
-module.exports = timescaleTable;
+

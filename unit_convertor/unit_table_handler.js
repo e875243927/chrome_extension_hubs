@@ -1,4 +1,4 @@
-const unitConversionTable = require('./unit_tables/unit_summary');
+import { unitConversionTable } from './unit_tables/unit_summary.js';
 
 // 獲取所有可用單位種類
 function getAvailableUnitType() {
@@ -52,7 +52,7 @@ function getUnitTypeLanguageTable() {
 
 
 // 導出功能
-module.exports = {
+export {
     getAvailableUnitType,
     getUnitConversionTableKey,
     getUnitConversionTable,

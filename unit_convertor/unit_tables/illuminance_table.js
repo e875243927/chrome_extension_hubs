@@ -1,4 +1,4 @@
-const illuminanceTable = {
+export const illuminanceTable = {
     'unit': {
         // 以勒克斯 (Lux) 為基準
         'lux': { offset: 0, scale: 1 },
@@ -113,4 +113,4 @@ const illuminanceTable = {
     },
 }
 
-module.exports = illuminanceTable;
+

@@ -1,4 +1,4 @@
-const { getUnitConversionFactor } = require('./unit_table_handler');
+import { getUnitConversionFactor } from './unit_table_handler.js';
 
 // 轉換到標準單位
 function convertToStandardUnit(value, unitType, unit) {
@@ -19,7 +19,7 @@ function convertUnit(value, unitType, fromUnit, toUnit) {
 }
 
 // 導出功能
-module.exports = {
+export {
     convertUnit,
     convertToStandardUnit,
     convertFromStandardUnit,

@@ -1,4 +1,4 @@
-const automotivePowerTable = {
+export const automotivePowerTable = {
     'unit': {
         // 以瓦特 (W) 為基準
         'watt': { offset: 0, scale: 1 },
@@ -198,4 +198,4 @@ const automotivePowerTable = {
     },
 }
 
-module.exports = automotivePowerTable;
+

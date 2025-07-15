@@ -1,6 +1,6 @@
-const { getUnitTypeLanguageTable, getUnitLanguageTable } = require('../unit_table_handler');
-const { i18n_error_table } = require('../i18n/i18n_error_table');
-const { i18n_ui_table } = require('../i18n/i18n_ui_table');
+import { getUnitTypeLanguageTable, getUnitLanguageTable } from '../unit_table_handler.js';
+import { i18n_error_table } from './i18n_error_table.js';
+import { i18n_ui_table } from './i18n_ui_table.js';
 
 // 國際化配置
 const i18nConfig = {
@@ -31,4 +31,4 @@ const i18nConfig = {
     }
 };
 
-module.exports = i18nConfig;
+export default i18nConfig;

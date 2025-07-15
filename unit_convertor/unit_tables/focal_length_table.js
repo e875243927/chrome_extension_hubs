@@ -1,4 +1,4 @@
-const focalLengthTable = {
+export const focalLengthTable = {
     'unit': {
         // 以全畫幅等效焦距為基準
         'full_frame': { offset: 0, scale: 1 },
@@ -76,4 +76,4 @@ const focalLengthTable = {
     },
 }
 
-module.exports = focalLengthTable;
+

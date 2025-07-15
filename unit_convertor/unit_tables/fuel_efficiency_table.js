@@ -1,4 +1,4 @@
-const fuelEfficiencyTable = {
+export const fuelEfficiencyTable = {
     'unit': {
         // 以公里每公升 (km/L) 為基準
         'km_per_liter': { offset: 0, scale: 1 },
@@ -85,4 +85,4 @@ const fuelEfficiencyTable = {
     },
 }
 
-module.exports = fuelEfficiencyTable;
+

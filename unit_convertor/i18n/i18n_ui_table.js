@@ -1,4 +1,4 @@
-i18n_ui_table = {
+export const i18n_ui_table = {
     'zh-TW': {
         'convert': '轉換',
         'converter': '轉換器',
@@ -17,6 +17,4 @@ i18n_ui_table = {
     },
 }
 
-module.exports = {
-    i18n_ui_table
-};
+

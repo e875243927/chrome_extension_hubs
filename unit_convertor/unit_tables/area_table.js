@@ -1,4 +1,4 @@
-const areaTable = {
+export const areaTable = {
     'unit': {
         // 以平方米 (m²) 為基準
         'square_meter': { offset: 0, scale: 1 },
@@ -143,4 +143,4 @@ const areaTable = {
     },
 }
 
-module.exports = areaTable;
+

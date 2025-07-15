@@ -1,4 +1,4 @@
-const i18nConfig = require('./i18n/i18n_config');
+import i18nConfig from './i18n/i18n_config.js';
 
 // i18n 管理器
 // 簡化的 i18n 管理器
@@ -63,7 +63,7 @@ class I18nManager {
 const i18n = new I18nManager();
 
 // 導出
-module.exports = {
+export {
     I18nManager,
     i18n,
 };

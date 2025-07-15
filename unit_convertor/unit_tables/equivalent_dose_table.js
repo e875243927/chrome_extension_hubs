@@ -1,4 +1,4 @@
-const equivalentDoseTable = {
+export const equivalentDoseTable = {
     'unit': {
         // 以西弗 (Sv) 為基準
         'sievert': { offset: 0, scale: 1 },                         // 1 Sv = 1 J/kg (加權)
@@ -236,4 +236,4 @@ const equivalentDoseTable = {
     },
 }
 
-module.exports = equivalentDoseTable;
+

@@ -1,4 +1,4 @@
-const pressureTable = {
+export const pressureTable = {
     'unit': {
         // 以帕斯卡 (Pa) 為基準
         'pascal': { offset: 0, scale: 1 },                          // 1 Pa = 1 N/m²
@@ -295,4 +295,4 @@ const pressureTable = {
     },
 }
 
-module.exports = pressureTable;
+

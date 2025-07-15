@@ -1,4 +1,4 @@
-const paperSizeTable = {
+export const paperSizeTable = {
     'unit': {
         // 以 A4 紙張面積為基準 (210mm × 297mm = 62,370 mm²)
         'a4': { offset: 0, scale: 1 },
@@ -198,4 +198,4 @@ const paperSizeTable = {
     },
 }
 
-module.exports = paperSizeTable;
+

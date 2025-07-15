@@ -1,4 +1,4 @@
-const magneticFieldTable = {
+export const magneticFieldTable = {
     'unit': {
         // 以特斯拉 (Tesla) 為基準
         'tesla': { offset: 0, scale: 1 },
@@ -96,4 +96,4 @@ const magneticFieldTable = {
     },
 }
 
-module.exports = magneticFieldTable;
+

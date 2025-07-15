@@ -1,4 +1,4 @@
-const dataStorageTable = {
+export const dataStorageTable = {
     'unit': {
         // 基本單位
         'bit': { offset: 0, scale: 0.125 },
@@ -50,4 +50,4 @@ const dataStorageTable = {
     },
 }
 
-module.exports = dataStorageTable;
+

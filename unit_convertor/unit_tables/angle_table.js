@@ -1,4 +1,4 @@
-const angleTable = {
+export const angleTable = {
     'unit': {
         // 以度 (degree) 為基準
         'degree': { offset: 0, scale: 1 },
@@ -37,4 +37,4 @@ const angleTable = {
     },
 }
 
-module.exports = angleTable;
+
