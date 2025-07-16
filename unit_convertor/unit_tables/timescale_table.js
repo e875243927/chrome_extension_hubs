@@ -1,0 +1,45 @@
+export const timescaleTable = {
+    'unit': {
+        'second': { offset: 0, scale: 1 },
+        'millisecond': { offset: 0, scale: 0.001 },
+        'microsecond': { offset: 0, scale: 0.000001 },
+        'nanosecond': { offset: 0, scale: 0.000000001 },
+        'picosecond': { offset: 0, scale: 0.000000000001 },
+        'minute': { offset: 0, scale: 60 },
+        'hour': { offset: 0, scale: 3600 },
+        'day': { offset: 0, scale: 86400 },
+        'week': { offset: 0, scale: 604800 },
+        'month': { offset: 0, scale: 2629746 },
+        'year': { offset: 0, scale: 31556952 },
+    },
+    'language': {
+        'zh-TW': {
+            'second': 's (秒)',
+            'millisecond': 'ms (毫秒)',
+            'microsecond': 'μs (微秒)',
+            'nanosecond': 'ns (奈秒)',
+            'picosecond': 'ps (皮秒)',
+            'minute': 'min (分鐘)',
+            'hour': 'hour (小時)',
+            'day': 'day (天)',
+            'week': 'week (週)',
+            'month': 'month (月)',
+            'year': 'year (年)',
+        },
+        'en': {
+            'second': 's (second)',
+            'millisecond': 'ms (millisecond)',
+            'microsecond': 'μs (microsecond)',
+            'nanosecond': 'ns (nanosecond)',
+            'picosecond': 'ps (picosecond)',
+            'minute': 'min (minute)',
+            'hour': 'hour',
+            'day': 'day',
+            'week': 'week',
+            'month': 'month',
+            'year': 'year',
+        },
+    },
+}
+
+

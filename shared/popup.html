@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+
+    <div class="header">
+      <h1 id="header">標題</h1>
+      <div class="language-toggle">
+        <button class="lang-icon" title="切換語言">🌐</button>
+        <div class="lang-dropdown">
+          <div class="lang-option" data-lang="zh-TW">
+            <span class="fi fi-tw"></span>繁中
+          </div>
+          <div class="lang-option" data-lang="zh-CN">
+            <span class="fi fi-cn"></span>简中
+          </div>
+          <div class="lang-option" data-lang="en">
+            <span class="fi fi-us"></span>EN
+          </div>
+          <div class="lang-option" data-lang="ja">
+            <span class="fi fi-jp"></span>JP
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <select class="dropdown">
+        <option class="dropdown-option" value="option1">選項 1</option>
+        <option class="dropdown-option" value="option2">選項 2</option>
+        <option class="dropdown-option" value="option3">選項 3</option>
+      </select>
+
+      <button class="btn btn-primary">按鈕 1</button>
+      <button class="btn btn-danger">按鈕 2</button>
+
+      <!-- 文字輸入框 -->
+      <input type="text" class="input-box" placeholder="請輸入文字">
+
+      <!-- 密碼輸入框 -->
+      <input type="password" class="input-box" placeholder="請輸入密碼">
+
+      <!-- 文字區域 -->
+      <textarea class="textarea" placeholder="請輸入多行文字"></textarea>
+
+      <!-- 複選框 -->
+      <label class="checkbox-label">
+        <input type="checkbox" class="checkbox">
+        <span class="checkmark"></span>
+        選項文字
+      </label>
+      <label class="checkbox-label">
+        <input type="checkbox" class="checkbox">
+        <span class="checkmark"></span>
+        選項文字
+      </label>
+
+      <!-- 單選按鈕 -->
+      <label class="radio-label">
+        <input type="radio" name="group1" class="radio">
+        <span class="radiomark"></span>
+        選項 1
+      </label>
+      <label class="radio-label">
+        <input type="radio" name="group1" class="radio">
+        <span class="radiomark"></span>
+        選項 2
+      </label>
+
+      <!-- 範圍滑桿 -->
+      <input type="range" class="slider" min="0" max="100" value="50">
+
+      <!-- 卡片 -->
+      <div class="card">
+        <div class="card-header">標題</div>
+        <div class="card-body">內容</div>
+        <div class="card-footer">底部</div>
+      </div>
+
+      <!-- 標籤/徽章 -->
+      <span class="badge badge-primary">新</span>
+      <span class="badge badge-success">完成</span>
+
+      <!-- 提示框 -->
+      <div class="tooltip">
+        懸停我
+        <span class="tooltip-text">這是提示文字</span>
+      </div>
+
+      <!-- 警告框 -->
+      <div class="alert alert-success">成功訊息</div>
+      <div class="alert alert-warning">警告訊息</div>
+      <div class="alert alert-error">錯誤訊息</div>
+
+      <!-- 切換開關 -->
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider-switch"></span>
+      </label>
+
+      <!-- 進度條 -->
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 60%"></div>
+      </div>
+
+      <!-- 載入動畫 -->
+      <div class="spinner"></div>
+
+    </div>
+  
+    <footer>
+      <!-- footer 內容 -->
+    </footer>
+  
+    <script src="popup.js"></script>
+
+  </body>
+</html>

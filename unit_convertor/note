@@ -1,0 +1,52 @@
+**電學類（剛才討論的）：**
+- 電流 (current)
+- 電壓 (voltage) 
+- 電阻 (resistance)
+- 電功率 (electrical_power) - 注意已有automotive_power，但電功率更廣泛
+- 頻率 (frequency)
+- 電容 (capacitance)
+- 電感 (inductance)
+
+**光學類：**
+- 光通量 (luminous_flux)
+- 發光強度 (luminous_intensity)
+- 亮度 (luminance)
+- 色溫 (color_temperature)
+
+**聲學類：**
+- 聲壓級 (sound_pressure_level)
+- 聲功率級 (sound_power_level)
+- 頻率 (frequency) - 雖然可能和電學頻率重疊
+
+**熱學類：**
+- 熱導率 (thermal_conductivity)
+- 比熱容 (specific_heat_capacity)
+- 熱阻 (thermal_resistance)
+- 熱流密度 (heat_flux_density)
+
+**機械類：**
+- 扭矩 (torque)
+- 功率密度 (power_density)
+- 應力 (stress)
+- 應變 (strain)
+- 彈性模量 (elastic_modulus)
+
+**流體類：**
+- 粘度 (viscosity)
+- 表面張力 (surface_tension)
+- 流量 (flow_rate)
+
+**化學類：**
+- 濃度 (concentration)
+- 摩爾濃度 (molarity)
+- pH值 (ph_value)
+- 電導率 (electrical_conductivity)
+
+**其他專業領域：**
+- 貨幣 (currency)
+- 鞋碼 (shoe_size) v
+- 服裝尺寸 (clothing_size)
+- 紙張尺寸 (paper_size) v
+- 輪胎規格 (tire_size)
+- 螺絲規格 (screw_size)
+- 管道規格 (pipe_size)

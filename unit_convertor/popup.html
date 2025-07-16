@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+  <!-- Flag Icons CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css" />
+</head>
+
+<body>
+
+  <div class="header">
+    <h1 id="header" text-i18n-name="converter">Converter</h1>
+    <div class="language-toggle">
+      <button class="lang-icon" title="切換語言" id="lang-toggle">🌐</button>
+      <div class="lang-dropdown">
+        <div class="lang-option" data-lang="zh-TW">
+          <span class="fi fi-tw"></span>繁中
+        </div>
+        <div class="lang-option" data-lang="zh-CN">
+          <span class="fi fi-cn"></span>简中
+        </div>
+        <div class="lang-option" data-lang="en">
+          <span class="fi fi-us"></span>EN
+        </div>
+        <div class="lang-option" data-lang="ja">
+          <span class="fi fi-jp"></span>JP
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <!-- 單位類型選擇 -->
+    <div class="form-group">
+      <span class="badge badge-primary" id="unit-type-text" text-i18n-name="unit_type">📊 選擇單位類型</span>
+      <select class="dropdown" id="unit-type-select"></select>
+    </div>
+
+    <!-- 轉換設定區域 -->
+    <div class="conversion-section">
+      <div class="form-group">
+        <span class="badge badge-primary" id="unit-in-text" text-i18n-name="input_unit">📥 輸入單位</span>
+        <select class="dropdown" id="value-in-select"></select>
+      </div>
+
+
+
+      <div class="form-group">
+        <span class="badge badge-primary" id="unit-out-text" text-i18n-name="output_unit">📤 輸出單位</span>
+        <select class="dropdown" id="value-out-select"></select>
+      </div>
+    </div>
+
+    <!-- 數值輸入 -->
+    <div class="form-group">
+      <span class="badge badge-primary" id="value-input-text" text-i18n-name="input_value">🔢 輸入數值</span>
+      <input id="value-input-box" type="text" class="input-box" placeholder="輸入數字或公式，如: 100, 2+3*4, (5+2)^2">
+    </div>
+
+    <!-- 結果顯示 -->
+    <div class="result-section">
+      <span class="badge badge-primary" id="result-text" text-i18n-name="result">✨ 轉換結果</span>
+      <div class="result-card">
+        <div class="result-main" id="result-value"></div>
+        <div class="result-details">
+          <div class="result-unit" id="result-unit-path"></div>
+          <div class="result-factor" id="result-factor"></div>
+          <div class="result-formula" id="result-formula"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="popup.js" type="module"></script>
+
+</body>
+
+</html>
