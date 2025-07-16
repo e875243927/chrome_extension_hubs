@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "價格追蹤器",
-  "version": "1.0",
+  "version": "1.0.0",
   "description": "追蹤網頁商品價格變化",
   
   "icons": {

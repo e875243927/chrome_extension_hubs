@@ -35,6 +35,28 @@ export const angleTable = {
             'percent_grade': 'Percent Grade (%)',
         },
     },
+    'zh-CN': {
+        'degree': '度 (°)',
+        'radian': '弧度 (rad)',
+        'gradian': '梯度/百分度 (gon)',
+        'turn': '转 (rev)',
+        'arcminute': '角分 (′)',
+        'arcsecond': '角秒 (″)',
+        'mil_nato': '密位 NATO (mil)',
+        'mil_ussr': '密位 苏联 (mil)',
+        'percent_grade': '百分比坡度 (%)',
+    },
+    'ja': {
+        'degree': '度 (°)',
+        'radian': 'ラジアン (rad)',
+        'gradian': 'グラジアン (gon)',
+        'turn': '回転 (rev)',
+        'arcminute': '分 (′)',
+        'arcsecond': '秒 (″)',
+        'mil_nato': 'ミル NATO (mil)',
+        'mil_ussr': 'ミル ソ連 (mil)',
+        'percent_grade': 'パーセント勾配 (%)',
+    },
 }
 
 
