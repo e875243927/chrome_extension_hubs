@@ -29,53 +29,93 @@ function isNumeric(str) {
 
 
 /**
- * Safely evaluates a mathematical expression using the Function constructor.
+ * A safe, custom parser for mathematical expressions.
+ * It handles +, -, *, /, ^ (power), and parentheses using the Shunting-yard algorithm.
+ * This avoids using eval() or new Function().
  * @param {string} expression The mathematical expression to evaluate.
  * @returns {number} The result of the calculation.
  */
 function evaluateExpression(expression) {
     try {
-        // 1. 移除所有空格
-        let sanitized = expression.replace(/\s/g, '');
+        const sanitized = expression.replace(/\s/g, '');
+        if (!sanitized) return NaN;
 
-        // 2. 檢查是否為空
-        if (sanitized === '') {
-            return NaN;
-        }
-
-        // 3. 處理不完整的表達式 (e.g., "5+", "5*")
-        if (/[+\-*\/^.]$/.test(sanitized)) {
-            // 移除結尾的操作符
-            sanitized = sanitized.slice(0, -1);
-        }
-
-        // 4. 再次檢查是否為空 (e.g., a single "+" was entered)
-        if (sanitized === '') {
-            return NaN;
-        }
-
-        // 5. 嚴格的白名單字符檢查
-        // 允許: 數字, e, E, ., +, -, *, /, (, ), ^
+        // Check for invalid characters.
         if (!/^[0-9eE.()+\-*\/^]+$/.test(sanitized)) {
             console.error('Invalid characters in expression');
             return NaN;
         }
 
-        // 6. 替換 '^' 為 '**' (ES7 exponentiation operator)
-        sanitized = sanitized.replace(/\^/g, '**');
+        const tokens = sanitized.match(/(\d+\.?\d*([eE][+-]?\d+)?|\.\d+([eE][+-]?\d+)?|[()+\-*\/^])/g);
+        if (!tokens) return NaN;
 
-        // 7. 使用 Function constructor 進行安全的計算
-        const calculate = new Function(`return ${sanitized}`);
-        const result = calculate();
+        const outputQueue = [];
+        const operatorStack = [];
+        // Adjusted precedence: * and / are higher than ^
+        const precedence = { '+': 1, '-': 1, '^': 2, '*': 3, '/': 3 };
+        const associativity = { '^': 'Right', '*': 'Left', '/': 'Left', '+': 'Left', '-': 'Left' };
 
-        if (typeof result !== 'number' || !isFinite(result)) {
-            throw new Error('Invalid calculation result');
+        tokens.forEach(token => {
+            if (!isNaN(token) && isFinite(token)) {
+                outputQueue.push(parseFloat(token));
+            } else if (token in precedence) {
+                while (
+                    operatorStack.length &&
+                    operatorStack[operatorStack.length - 1] !== '(' &&
+                    (precedence[operatorStack[operatorStack.length - 1]] > precedence[token] ||
+                     (precedence[operatorStack[operatorStack.length - 1]] === precedence[token] && associativity[token] === 'Left'))
+                ) {
+                    outputQueue.push(operatorStack.pop());
+                }
+                operatorStack.push(token);
+            } else if (token === '(') {
+                operatorStack.push(token);
+            } else if (token === ')') {
+                while (operatorStack.length && operatorStack[operatorStack.length - 1] !== '(') {
+                    outputQueue.push(operatorStack.pop());
+                }
+                if (operatorStack[operatorStack.length - 1] === '(') {
+                    operatorStack.pop();
+                } else {
+                    throw new Error('Mismatched parentheses');
+                }
+            }
+        });
+
+        while (operatorStack.length) {
+            const op = operatorStack.pop();
+            if (op === '(') throw new Error('Mismatched parentheses');
+            outputQueue.push(op);
         }
 
-        return result;
+        const evaluationStack = [];
+        outputQueue.forEach(token => {
+            if (typeof token === 'number') {
+                evaluationStack.push(token);
+            } else {
+                if (evaluationStack.length < 2) throw new Error('Invalid expression');
+                const b = evaluationStack.pop();
+                const a = evaluationStack.pop();
+                switch (token) {
+                    case '+': evaluationStack.push(a + b); break;
+                    case '-': evaluationStack.push(a - b); break;
+                    case '*': evaluationStack.push(a * b); break;
+                    case '/':
+                        if (b === 0) throw new Error('Division by zero');
+                        evaluationStack.push(a / b);
+                        break;
+                    case '^': evaluationStack.push(Math.pow(a, b)); break;
+                }
+            }
+        });
+
+        if (evaluationStack.length !== 1) throw new Error('Invalid expression');
+        const finalResult = evaluationStack[0];
+
+        return isFinite(finalResult) ? finalResult : NaN;
 
     } catch (error) {
-        console.error('公式解析錯誤:', error);
+        console.error('Formula parsing error:', error.message);
         return NaN;
     }
 }
