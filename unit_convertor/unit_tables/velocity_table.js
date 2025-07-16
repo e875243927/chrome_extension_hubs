@@ -1,4 +1,4 @@
-export 
+export const velocityTable = {
     'unit': {
         // 以米每秒 (m/s) 為基準
         'meter_per_second': { offset: 0, scale: 1 },                // 1 m/s
@@ -255,5 +255,3 @@ export
         },
     },
 }
-
-

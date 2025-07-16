@@ -1,7 +1,6 @@
 import i18nConfig from './i18n/i18n_config.js';
 
 // i18n 管理器
-// 簡化的 i18n 管理器
 class I18nManager {
     constructor(config = i18nConfig) {
         this.config = config;
